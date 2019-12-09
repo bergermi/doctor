@@ -21,7 +21,7 @@ public class DoctorWhoApplication2 {
 	@ResponseBody
 	public String doctor(@PathVariable("incarnationNumber") int incarnationNumber) {
 		if (incarnationNumber >= 1 && incarnationNumber <= 8) {
-			throw new ResponseStatusException(HttpStatus.MOVED_PERMANENTLY);
+			throw new ResponseStatusException(HttpStatus.SEE_OTHER);
 		}
 		
 		if (incarnationNumber < 1 || incarnationNumber > 13) {
